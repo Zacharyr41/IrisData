@@ -68,8 +68,6 @@ class Iris(BaseModel):
 def get_prediction(features:Iris):
     species_pred = classifier.make_prediction(features.dict())
     return JSONResponse({"species":species_pred})
-@app.get("/")
-def index():
-    return {"hello" : "world"}
+    
 
 
